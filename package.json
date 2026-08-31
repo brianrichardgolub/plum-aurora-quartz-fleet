@@ -1,4 +1,3 @@
-npm install tslib
 {
   "name": "app-builder-workspace",
   "private": true,
