@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-background: #efeae2;
+  --color-foreground: #1a1814;
+  --color-card: #f7f4ef;
+  --color-card-foreground: #1a1814;
+  --color-popover: #f7f4ef;
+  --color-popover-foreground: #1a1814;
+  --color-primary: #243447;
+  --color-primary-foreground: #f4efe6;
+  --color-secondary: #e7e0d6;
+  --color-secondary-foreground: #1a1814;
+  --color-muted: #e4ddd3;
+  --color-muted-foreground: #6b655c;
+  --color-accent: #e7e0d6;
+  --color-accent-foreground: #1a1814;
+  --color-destructive: #8f3d2b;
+  --color-destructive-foreground: #f7f4ef;
+  --color-border: #d4cbbd;
+  --color-input: #d4cbbd;
+  --color-ring: #243447;
+  --color-ink: #243447;
+  --color-paper: #f7f4ef;
+  --color-rule: #c45c3e;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border:
+    0px 0px 0px 1px rgba(26, 24, 20, 0.06),
+    0px 1px 2px -1px rgba(26, 24, 20, 0.06),
+    0px 2px 4px 0px rgba(26, 24, 20, 0.04);
+  --shadow-border-hover:
+    0px 0px 0px 1px rgba(26, 24, 20, 0.1),
+    0px 1px 2px -1px rgba(26, 24, 20, 0.08),
+    0px 2px 8px 0px rgba(26, 24, 20, 0.06);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+    font-family: var(--font-serif);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  img {
+    outline: 1px solid rgba(26, 24, 20, 0.1);
+    outline-offset: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
